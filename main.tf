@@ -1,8 +1,13 @@
 provider "aws" {
-    region = "us-east-1"  
+    region = "ap-south-1"  
 }
 
-resource "aws_instance" "foo" {
-  ami           = "ami-05fa00d4c63e32376" # us-west-2
-  instance_type = "t2.micro"  
+resource "aws_instance" "web" {
+  ami           = "ami-0f8ca728008ff5af4"
+  instance_type = "t2.micro"
+  subnet_id     = "subnet-03e27f96cca27f839"
+
+  tags = {
+    Name = "HelloWorld36"
+  }  
 }
