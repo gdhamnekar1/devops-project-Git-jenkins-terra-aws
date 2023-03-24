@@ -1,5 +1,7 @@
 provider "aws" {
-    region = "ap-south-1"  
+  region     = "ap-south-1"
+  access_key = "AKIAQZTK7F7PRVNQ774N"
+  secret_key = "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"
 }
 
 resource "aws_instance" "web" {
@@ -9,5 +11,3 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "HelloWorld36"
-  }  
-}
